@@ -1,0 +1,28 @@
+{
+  "name": "fromthestands",
+  "version": "1.0.0",
+  "description": "App for the football fans can note the matches that they see",
+  "main": "index.js",
+  "scripts": {
+    "test": "MODO_ENV=test node --test",
+    "dev": "MODO_ENV=development nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carreiraRCD/FromTheStands.git"
+  },
+  "author": "Jorge Carreira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carreiraRCD/FromTheStands/issues"
+  },
+  "homepage": "https://github.com/carreiraRCD/FromTheStands#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mogodb": "^0.0.1-security",
+    "mongoose": "^9.1.2",
+    "nodemon": "^3.1.11"
+  }
+}

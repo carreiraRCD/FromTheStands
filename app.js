@@ -1,0 +1,1 @@
+/home/carreira/Documentos/CODE/FromTheStands/node_modules
