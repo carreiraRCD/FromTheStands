@@ -34,6 +34,10 @@ const matchSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  method: {
+    type: String,
+    required: true
+  },
   comment: String
 })
 
