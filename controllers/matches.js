@@ -49,6 +49,32 @@ matchRouter.delete('/:id', async (req, res, next) => {
     }
 })
 
+// Editar cualquier variable del partido
+
+// PUT /matches/:id
+matchRouter.put('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const updatedMatch = await Match.findByIdAndUpdate(
+      id,
+      req.body,               // campos a modificar
+      {
+        new: true,             // devuelve el documento actualizado
+        runValidators: true    // aplica validaciones del schema
+      }
+    );
+    if (!updatedMatch) {
+      return res.status(404).json({ error: 'Partido no encontrado' });
+    }
+
+    res.json(updatedMatch);
+
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
 
 //Exportación del modulo
 module.exports = matchRouter
